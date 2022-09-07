@@ -9,3 +9,7 @@ let loadData = () => {
   document.getElementById('productCategory').innerText = product.category;
   document.getElementById('productDescription').innerText = product.description;
 }
+let addToCart = () => {
+  let id = getParameterByName('id');
+  let product = ProductHandler.getDataById(id);
+}

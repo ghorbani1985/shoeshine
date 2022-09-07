@@ -1,4 +1,3 @@
-
 let mainNavUl = document.querySelector('#MainNavUl');
 let mobileNavIcon = document.querySelector('#MobileNavIcon');
 let mainNav = document.querySelector('#MainNav');

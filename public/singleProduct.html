@@ -9,12 +9,36 @@
     <link rel="stylesheet" href="./build/tailwind.css"/>
   </head>
   <body class="bg-gray-100 text-slate-800">
-     <header class="w-full bg-white shadow-md text-slate-800 z-10 sticky top-[0.01rem] mb-4">
-             <nav class="contianer w-full flex justify-start md:items-center">
+     <header class="w-full bg-white text-slate-800">
+      <!-- Top Header -->
+        <div class="w-full bg-red-400">
+          <p class="container w-full flex justify-center items-center font-bold text-base text-white p-2 border-b-2 border-b-red-700 border-dashed">به فروشگاه آنلاین شوشاین خوش آمدید</p> 
+        </div>
+         <div class="contianer w-full flex justify-between items-center">
+          <!-- MObile Menu Icon -->
+          <div class="block md:hidden" id="MobileNavIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 pt-2">
+<path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+</svg>
+          </div>
+          <!-- Logo -->
+          <div class="w-full flex flex-1 justify-center items-center">
+            <img src="../assets/images/shoeShineLogo.png" alt="logo" class="object-fill w-32 h-32">
+          </div>
+          <!-- Cart Icon -->
+                   <div class="flex md:hidden">
+                  <a href="cart.html" class="p-2 md:p-3 hover:text-red-500 transition-all ease-in-out duration-700 flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 fill-red-500">
+  <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+</svg></a>
+                   </div>
+         </div>
+          </header>
+             <nav class="w-full flex justify-start md:items-center shadow-xl z-50 sticky top-0 bg-gray-200 md:border-t-2 md:border-t-gray-700 md:border-dashed mb-4">
                  <!-- Desktop nav -->
                  <div class="hidden md:block" id="MainNav">
                    <ul class="flex items-center" id="MainNavUl">
-                    <li><a href="index.html" class="p-2 md:p-3 hover:text-red-500 transition-all ease-in-out duration-700 flex">
+                    <li><a href="" class="p-2 md:p-3 hover:text-red-500 transition-all ease-in-out duration-700 flex">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 pl-2 fill-red-500">
   <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
   <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
@@ -35,24 +59,22 @@
 </svg><span>درباره ما</span></a></li>
                   </ul>
                  </div>
-                 <!-- Logo -->
                  <div class="w-full flex md:flex-1 items-center sm:justify-end md:pr-32" id="MainLogo">
-                  <img src="../assets/images/shoeShineLogo.png" alt="logo" class="object-fill w-24 h-24">
+                   <!-- Desktop Cart Icon -->
+                   <div class="hidden md:flex">
+                  <a href="cart.html" class="p-2 md:p-3 hover:text-red-500 transition-all ease-in-out duration-700 flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 fill-red-500">
+  <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+</svg></a>
+                   </div>
+                 
                  </div>
-                  <!-- Mobile nav -->
-                  <div class="flex md:hidden w-full justify-end"  id="MobileNavIcon">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 ">
-  <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-</svg>
-
-                  </div>
              </nav>
-     </header>
      <main class="container">
       <div class="flex flex-col bg-white rounded-lg p-2" id="singleProduct">
         <div class="w-full flex flex-col md:flex-row gap-4">
         <div class="w-full md:w-3/5 justify-center items-center p-4">
-           <img id="productImage" src="../assets/images/01.jpg" alt="shoes01" class="object-fill">
+           <img id="productImage" src="../assets/images/1.jpg" alt="shoes01" class="object-fill">
         </div>
       <div class="w-full md:w-2/5 flex flex-col justify-evenly p-2 border-r-2 border-r-gray-100 border-r-solid">
         <p class="w-full h-px bg-gray-300 block md:hidden mb-2"></p>
@@ -78,7 +100,10 @@
           <span id="productCategory" class="font-bold">کفش</span>
           </div>
           <div class="my-2 w-full">
-               <a href="" class="bg-red-500 text-white py-4 px-2 inline-block w-full rounded-lg text-center transition-all ease-in-out duration-700 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 hover:border-solid"> افزودن به سبد خرید</a>
+               <a onclick="addToCart()" class="bg-red-500 text-white flex justify-center items-center py-3 px-2 w-full rounded-lg text-center transition-all ease-in-out duration-700 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 hover:border-solid">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+</svg><span class="text-lg pr-2 font-bold">   افزودن به سبد خرید</span></a>
              </div>
           <div class="flex justify-between items-center">
                <div class="flex flex-col items-center">
@@ -178,9 +203,11 @@
              <p class="text-gray-400 font-['Vazir']">shoeshine.ir - 2022 © Copyright</p>
             </div>
      </footer>
+ <script src="../src/js/utils/functionCookies.js"></script>
+ <script src="../src/js/models/Product.js"></script>
+ <script src="../src/js/handlers/ProductHandler.js"></script>
  <script src="../src/js/db/ProductDB.js"></script>
-    <script src="../src/js/handlers/ProductHandler.js"></script>
-    <script src="../src/js/models/Product.js"></script>
+ <script src="../src/js/db/CartDB.js"></script>
     <script src="../src/js/main.js"></script>
     <script src="../src/js/controler/showSingleProduct.js"></script>
   </body>

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="icon" type="image/png" href="../assets/images/RealEstateConsultantLogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>محصولات </title>
+    <title>سبد خرید</title>
     <link rel="stylesheet" href="./build/tailwind.css"/>
   </head>
   <body class="bg-gray-100 text-slate-800">
-          <header class="w-full bg-white text-slate-800">
+     <header class="w-full bg-white text-slate-800">
       <!-- Top Header -->
         <div class="w-full bg-red-400">
           <p class="container w-full flex justify-center items-center font-bold text-base text-white p-2 border-b-2 border-b-red-700 border-dashed">به فروشگاه آنلاین شوشاین خوش آمدید</p> 
@@ -71,13 +71,11 @@
                  </div>
              </nav>
      <main class="container">
-       <section class="flex justify-center items-center">
-        <div class="w-full lg:w-3/5 flex justify-center items-center text-base md:text-2xl  font-bold p-4 relative"><h2 class="before:w-10 before:md:w-32 before:lg:w-36 before:h-1 before:bg-red-600 before:absolute before:content-[''] before:right-0 before:top-7 before:rounded-lg after:w-10 after:md:w-32 after:lg:w-36 after:h-1 after:bg-red-600 after:absolute after:content-[''] after:left-0 after:lg:left-6 after:top-7 after:rounded-lg"> محصولات</h2></div>
-       </section>
-     <!-- Products -->
-     <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4" id="newProducts">
-        
-     </section>
+      <div class="flex flex-col bg-white rounded-lg p-2" id="singleProduct">
+        <div class="w-full flex flex-col md:flex-row gap-4">
+سبد
+             </div>
+          </div>
      </main>
      <footer class="bg-white w-full mt-8">
             <section class=container>
@@ -121,27 +119,12 @@
              <p class="text-gray-400 font-['Vazir']">shoeshine.ir - 2022 © Copyright</p>
             </div>
      </footer>
-<!-- Product Template -->
-       <div class="hidden" id="productItemTemplate">
-        <div class="bg-white rounded-lg p-2 flex flex-col justify-between items-center">
-           <img src="__IMAGE__" alt="shoes06" class="object-fill rounded-lg border-2 border-gray-200 border-solid mb-3">
-          <p class="font-bold">__TITLE__</p>
-          <div class="w-full flex md:flex-col lg:flex-row justify-between items-center my-5 px-2">
-            <del class="text-gray-400 md:text-base lg:text-lg">__OLDPRICE__ تومان</del>
-          <span class="font-bold md:text-base lg:text-lg">__NEWPRICE__ تومان</span>
-          </div>
-          <p class="w-full my-2">دسته بندی : <span class="font-bold">__CATEGORY__</span></p>
-         <div class="my-2 w-full">
-           <a href="singleProduct.html?id=__ID__" class="bg-red-500 text-white p-2 inline-block w-full rounded-lg text-center transition-all ease-in-out duration-700 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 hover:border-solid">مشاهده محصول</a>
-         </div>
-         </div>
-       </div>
-    <script src="../src/js/utils/functionCookies.js"></script>
-    <script src="../src/js/models/Product.js"></script>
-    <script src="../src/js/handlers/ProductHandler.js"></script>
-    <script src="../src/js/db/ProductDB.js"></script>
-    <script src="../src/js/db/CartDB.js"></script>
+ <script src="../src/js/utils/functionCookies.js"></script>
+ <script src="../src/js/models/Product.js"></script>
+ <script src="../src/js/handlers/ProductHandler.js"></script>
+ <script src="../src/js/db/ProductDB.js"></script>
+ <script src="../src/js/db/CartDB.js"></script>
     <script src="../src/js/main.js"></script>
-    <script src="../src/js/controler/showAllProducts.js"></script>
+    <script src="../src/js/controler/cartControler.js"></script>
   </body>
 </html>
