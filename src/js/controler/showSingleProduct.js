@@ -12,4 +12,5 @@ let loadData = () => {
 let addToCart = () => {
   let id = getParameterByName('id');
   let product = ProductHandler.getDataById(id);
+  CartDB.addToCart(product);
 }
