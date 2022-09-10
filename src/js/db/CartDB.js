@@ -11,7 +11,7 @@ class CartDB {
     } else {
       dataList.push(cartItem);
     }
-    setCookie('basket', JSON.stringify(dataList), 30);
+    setCookie('basket', JSON.stringify(dataList), 1);
     alert('محصول' + cartItem.title + 'با موفقیت به سبد خرید افزوده شد.');
   }
   static load() {
@@ -34,7 +34,7 @@ class CartDB {
         let oldData = dataList.find((value) => value != null && value.id == id);
         if (oldData != undefined && oldData != null) {
           oldData.qty++;
-          setCookie('basket', JSON.stringify(dataList), 30);
+          setCookie('basket', JSON.stringify(dataList), 1);
           return oldData.qty;
         } 
         return 0;
@@ -51,7 +51,7 @@ class CartDB {
            let index = dataList.findIndex((value) => value != null && value.id == id);
            delete dataList[index];
           }
-          setCookie('basket', JSON.stringify(dataList), 30);
+          setCookie('basket', JSON.stringify(dataList), 1);
           return oldData.qty;
         } 
         return 0;

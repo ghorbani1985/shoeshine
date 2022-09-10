@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link rel="icon" type="image/png" href="../assets/images/RealEstateConsultantLogo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>سبد خرید</title>
+  <title>پرداخت</title>
   <link rel="stylesheet" href="./build/tailwind.css" />
 </head>
 
@@ -83,21 +83,64 @@
   </nav>
   <main class="container">
     <div class="flex flex-col bg-white rounded-lg p-2">
-      <div class="w-full flex flex-col md:flex-row gap-3" id="itemsContainer">
+      <div class="w-full flex flex-col md:flex-row gap-3">
         <!-- Items Grid -->
-         <div class="flex flex-row md:flex-col justify-center md:w-[70%]">
-          <div class="hidden w-full md:flex justify-center items-center">
-            <p class="w-2/5 text-center p-2 font-bold">محصول</p>
-            <p class="w-1/5 text-center p-2 font-bold">قیمت</p>
-            <p class="w-1/5 text-center p-2 font-bold">تعداد</p>
-            <p class="w-1/5 text-center p-2 font-bold">قیمت کل</p>
-          </div>
-          <p class="hidden md:block w-full h-px bg-gray-200"></p>
-          <div id="cartItems"></div>
-          <p class="hidden md:block w-full h-px bg-gray-200"></p>
+         <div class="flex flex-col w-full md:w-1/2">
+       <p class="w-full font-bold text-xl mb-2"><h2>جزئیات پرداخت</h2></p>
+         <form action="">
+        <div class="w-full flex flex-col md:flex-row justify-between items-center gap-2 mb-2">
+         <div class="w-full md:w-1/2 flex flex-col">
+          <label class="mb-2" for="fname">نام <span class="text-red-500 pl-2">*</span></label>
+          <input name="fname" id="fname" type="text" placeholder="لطفا نام خود را وارد نمایید" class="rounded-full">
+         </div>
+         <div class="w-full md:w-1/2 flex flex-col">
+          <label class="mb-2" for="lname">نام خانوادگی <span class="text-red-500 pl-2">*</span></label>
+          <input name="lname" id="lname" type="text" placeholder="لطفا نام خانوادگی خود را وارد نمایید" class="rounded-full">
+         </div>
         </div>
-        <div class="w-full md:w-[29.5%] flex flex-col items-center p-2 rounded-lg border-4 border-gray-300 border-dashed bg-gray-100">
-          <p class="font-bold my-2">مجموع کل سبد خرید</p>
+        <div class="w-full flex flex-col md:flex-row justify-between items-center gap-2 mb-2">
+         <div class="w-full md:w-1/2 flex flex-col">
+          <label class="mb-2" for="state">استان <span class="text-red-500 pl-2">*</span></label>
+          <input name="state" id="state" type="text" placeholder="لطفا استان خود را وارد نمایید" class="rounded-full">
+         </div>
+         <div class="w-full md:w-1/2 flex flex-col">
+          <label class="mb-2" for="city">شهر<span class="text-red-500 pl-2">*</span></label>
+          <input name="city" id="city" type="text" placeholder="لطفا شهر خود را وارد نمایید" class="rounded-full">
+         </div>
+        </div>
+         <div class="w-full flex flex-col mb-2">
+         <label class="mb-2" for="address">آدرس کامل<span class="text-red-500 pl-2">*</span></label>
+          <input name="address" id="address" type="text" placeholder="لطفا آدرس کامل خود را وارد نمایید" class="rounded-full">
+         </div>
+           <div class="w-full flex flex-col md:flex-row justify-between items-center gap-2 mb-2">
+         <div class="w-full md:w-1/2 flex flex-col">
+          <label class="mb-2" for="mobile">شماره موبایل <span class="text-red-500 pl-2">*</span></label>
+          <input name="mobile" id="mobile" type="text" placeholder="لطفا شماره موبایل خود را وارد نمایید" class="rounded-full">
+         </div>
+         <div class="w-full md:w-1/2 flex flex-col">
+          <label class="mb-2" for="postCode">کد پستی (اختیاری)</label>
+          <input name="postCode" id="postCode" type="text" placeholder="لطفا کد پستی خود را وارد نمایید" class="rounded-full">
+         </div>
+        </div>
+         <div class="w-full flex flex-col">
+         <label class="mb-2" for="note"> یادداشت سفارش (اختیاری)</label>
+          <textarea name="note" id="note" placeholder="لطفا یادداشت سفارش را وارد نمایید مانند موارد درباره حمل و نقل" class="rounded-2xl h-64 min-h-full max-h-64"></textarea>
+         </div>
+         </form>
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col justify-evenly items-center p-2 rounded-lg border-4 border-gray-300 border-dashed bg-gray-100">
+          <p class="font-bold my-2">مجموع سفارش  </p>
+        <div class="w-full bg-white p-2 rounded-lg">
+               <div class="w-full flex justify-between items-center py-3 mb-2 border-b-2 border-b-gray-100 border-b-solid">
+            <p class="font-bold">محصول</p>
+            <p class="font-bold">قیمت کل</p>
+          </div>
+          <div>
+           <p class="w-full h-px bg-gray-200"></p>
+          <div id="cartItems" class="my-2"></div>
+          <p class="w-full h-px bg-gray-200"></p>
+          </div>
+          <p class="w-full h-px bg-gray-300"></p>
           <div class="w-full flex justify-between items-center py-3">
             <p class="font-bold">قیمت کل</p>
             <p id="sumPriceInvoice" class="text-red-500 font-bold"></p>
@@ -112,24 +155,19 @@
             <p class="font-bold">مجموع کل</p>
             <p id="sumPricePost" class="text-red-500 font-bold"></p>
           </div>
-          <div class="my-2 w-full">
-            <a href="checkout.html" class="bg-red-500 text-white flex justify-center items-center py-3 px-2 w-full rounded-lg text-center transition-all ease-in-out duration-700 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 hover:border-solid">
-              <span class="text-lg pr-2 font-bold"> اقدام به پرداخت</span></a>
-          </div>
         </div>
-      </div>
-      <div class="w-full hidden" id="nullCartMsg">
-        <div class="w-full flex flex-col justify-center items-center p-6">
-          <div class="flex justify-center items-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-8 h-8 stroke-yellow-500">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-            </svg>
-            <h1 class="text-xl font-bold pr-2">کاربر گرامی، سبد خرید شما خالی می باشد.</h1>
-          </div>
-          <div class="my-8">
-            <a href="products.html" class="bg-red-500 text-white flex justify-center items-center py-3 px-2 w-full rounded-lg text-center transition-all ease-in-out duration-700 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 hover:border-solid">
-              <span class="text-lg pr-2 font-bold"> بازگشت به فروشگاه</span></a>
-          </div>
+        <div class="flex items-center w-full my-4">
+        <p>پرداخت امن زرین پال</p>
+        <img src="../assets/images/zarinpalLogo.png" alt="zarinpalLogo" class="mr-2">
+        </div>
+        <div class="w-full bg-white p-3 rounded-lg my-4">
+          <p>پرداخت امن به وسیله کلیه کارت های عضو شتاب از طریق درگاه زرین پال</p>
+        </div>
+         <p class="w-full h-px bg-gray-300 my-4"></p>
+        <div class="my-2 w-full">
+          <a class="bg-red-500 text-white flex justify-center items-center py-3 px-2 w-full rounded-lg text-center transition-all ease-in-out duration-700 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500 hover:border-solid">
+            <span class="text-lg pr-2 font-bold"> ثبت سفارش </span></a>
+        </div>
         </div>
       </div>
     </div>
@@ -204,67 +242,18 @@
   </footer>
   <!-- Items Template -->
   <div class="hidden" id="itemsTemplate">
-    <div class="hidden w-full md:flex justify-center items-center" id="decIncItems__ID__">
-      <div class="w-2/5 flex justify-between items-between md:items-center">
-        <img src="__IMAGE__" alt="shoes01" class="object-fill w-8 h-8" />
+    <div class="w-full flex justify-center items-center" id="decIncItems__ID__">
+      <div class="w-full flex justify-between items-between md:items-center">
+       <div class="w-3/4 flex ml-1">
+         <img src="__IMAGE__" alt="shoes01" class="object-fill w-6 h-6 md:w-8 md:h-8" />
         <p class="text-sm md:text-base pr-1">__TITLE__</p>
-      </div>
-      <div class="w-1/5 flex justify-center items-center">
-        <p class="flex justify-center items-center text-sm md:text-base">__PRICE__ تومان</p>
-      </div>
-      <div class="w-1/5 flex justify-center items-center">
-        <div class="flex justify-center items-center p-2">
-          <button onclick="decreaseQTY(__ID__)" class="flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  transition-all ease-in-out duration-500 hover:stroke-red-500">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-</button>
-<p class="flex justify-center items-center border-2 border-gray-200 border-solid rounded py-1 px-2" id="qty___ID__">__QTY__</p>
-          <button onclick="increaseQTY(__ID__)" class="flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  transition-all ease-in-out duration-500 hover:stroke-red-500">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-          </button>
-        </div>
-      </div>
-      <div class="w-1/5 flex justify-center items-center">
-        <p class="flex justify-center items-center text-red-500 font-bold">__SUMPRICE__ تومان</p>
+       </div>
+       <div class="w-1/4 flex justify-center items-center">
+         <p class="flex justify-center items-center text-red-500 font-bold">__SUMPRICE__ تومان</p>
+       </div>
       </div>
     </div>
     <p class="hidden md:block w-full h-px bg-gray-200"></p>
-        <!-- Mobile Grid -->
-         <div class="w-full flex md:hidden gap-x-2">
-    <div class="w-1/5 flex justify-center items-center">
-         <img src="__IMAGE__" alt="shoes01" class="object-fill w-12 h-12 sm:p-1">
-    </div>
-    <div class="w-4/5 flex flex-col">
-          <p class=py-2>__TITLE__</p>
-       <div class="w-full flex justify-between items-center border-b-2 border-b-gray-100 border-dashed">
-           <p class="p-2 font-bold">قیمت</p>
-      <p class="flex justify-center items-center">__PRICE__ تومان</p>
-       </div>
-       <div class="w-full flex justify-between items-center border-b-2 border-b-gray-100 border-dashed">
-            <p class="p-2 font-bold">تعداد</p>
-            <div class="flex justify-center items-center">
-              <button onclick="decreaseQTY(__ID__)" class="flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  transition-all ease-in-out duration-500 hover:stroke-red-500">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </button>
-              <p class="flex justify-center items-center border-2 border-gray-200 border-solid rounded py-1 px-2" id="qty___ID__">__QTY__</p>
-          <button onclick="increaseQTY(__ID__)" class="flex justify-center items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  transition-all ease-in-out duration-500 hover:stroke-red-500">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-          </button>
-    </div>
-       </div>
-       <div class="w-full flex justify-between items-center border-b-2 border-b-gray-100 border-dashed">
-           <p class="p-2 font-bold">قیمت کل</p>
-      <p class="text-red-500 font-bold">__SUMPRICE__ تومان</p>
-       </div>
-    </div>
-    </div>
   </div>
 
   <script src="../src/js/utils/functionCookies.js"></script>
